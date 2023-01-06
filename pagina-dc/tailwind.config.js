@@ -28,7 +28,7 @@ module.exports = {
         // => @media (min-width: 360px) { ... }
         'tablet': '640px',
         // => @media (min-width: 640px) { ... }
-        'lap_tablet': '768px',
+        'lap_tablet': '800px',
         // => @media (min-width: 768px) { ... }
         'laptop': '1000px',
         // => @media (min-width: 768px) { ... }

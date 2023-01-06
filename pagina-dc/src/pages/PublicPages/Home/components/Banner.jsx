@@ -22,6 +22,19 @@ export default function Banner() {
           <Button measures='w-24' title="COLLARS AND CONS" />
         </div>
       </div>
+      <div className="mt-4 mobile:block lap_tablet:hidden mobile:w-[320px] tablet:w-[440px] mobile:mx-auto bg-orange-700">
+        <h2 className="text-xl text-black text-center">MY TOP THREE</h2>
+        <h1 className="text-3xl font-extrabold mt-2 text-black ">
+          CATS, DOGS AND CONJURERS
+        </h1>
+        <h3 className="text-justify mt-2 text-black">
+          Kelly Knox's favorite DC projects of 2022 included a teen take on a
+          famous magician and two VERY different furry fables.
+        </h3>
+        <div className="mt-4">
+          <Button measures='w-24' title="COLLARS AND CONS" />
+        </div>
+      </div>
     </div>
   );
 }
