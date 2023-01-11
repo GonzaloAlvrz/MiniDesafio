@@ -2,13 +2,13 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import "../Carousel.css";
-import CardNews from "../carouselNews/CardNews";
-import { dataCard } from "../carouselNews/dataNews";
-
+import "../../carousel/Carousel.css";
+import CardVideo from "./CardVideo";
+import { DataCard } from "./dataVideos";
 
 export default function Silder() {
   const responsive = {
+    
     mobile: {
       breakpoint: { max: 640, min: 0 },
       items: 1,
@@ -23,29 +23,29 @@ export default function Silder() {
     },
     desktopTwo: {
       breakpoint: { max:2000, min: 1400 },
-      items: 3,
-    }
+      items: 4,
+    },
+
   };
 
-  const cardNews = dataCard.map((item) => (
-    <CardNews
+  const cardVideo = DataCard.map((item) => (
+    <CardVideo
       title={item.title}
       url={item.imageurl}
       description={item.description}
     />
   ));
+
   return (
     <div>
       <div className="mt-10">
         <Carousel
           className="mobile:w-full desktop-two:w-[1400px]  mx-auto"
           responsive={responsive}
-          button="bg-white"
         >
-          {cardNews}
+          {cardVideo}
         </Carousel>
       </div>
-
     </div>
   );
 }

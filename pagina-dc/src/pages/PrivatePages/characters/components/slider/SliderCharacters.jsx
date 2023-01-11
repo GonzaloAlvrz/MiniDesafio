@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import ArrowL from "../img/slider/arrowLeft.svg";
-import ArrowR from "../img/slider/arrowRight.svg";
-import Point from "../img/slider/point.svg";
-import Button from "./Button";
+import ArrowL from "../../img/slider/arrowLeft.svg";
+import ArrowR from "../../img/slider/arrowRight.svg";
+import Point from "../../img/slider/point.svg";
+import Button from "../../../../PublicPages/Home/components/Button";
 export default function Slider() {
   const slides = [
     {
@@ -60,15 +60,15 @@ export default function Slider() {
   };
 
   return (
-    <div className="w-full h-[650px]  mx-auto py-16 relative mobile:mt-28  tablet:mt-20 desktop-one:mt-0 desktop-two:mt-44">
+    <div className="w-full h-[650px]  mx-auto relative mobile:mt-28  tablet:mt-20 desktop-one:mt-0 desktop-two:mt-0">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full  bg-center bg-cover "
       ></div>
-      <div onClick={prevSlide} className="absolute top-[50%] translate-x-0 translate-y-[-50%] left-10 text-2xl flex justify-center items-center h-11 w-11 rounded-full p-2 bg-white text-white cursor-pointer z-10">
+      <div onClick={prevSlide} className="absolute top-[70%] translate-x-0 translate-y-[-50%] right-60 text-2xl flex justify-center items-center h-11 w-11 rounded-full p-2 bg-white text-white cursor-pointer z-10">
         <img src={ArrowL}  alt="" />
       </div>
-      <div  onClick={nextSlide} className="absolute top-[50%] translate-x-0 translate-y-[-50%] right-10 text-2xl flex justify-center items-center h-11 w-11 rounded-full p-2 bg-white text-white cursor-pointer z-10">
+      <div  onClick={nextSlide} className="absolute top-[70%] translate-x-0 translate-y-[-50%] right-40 text-2xl flex justify-center items-center h-11 w-11 rounded-full p-2 bg-white text-white cursor-pointer z-10">
         <img src={ArrowR} alt="" />
       </div>
       <div className="absolute  top-[50%] translate-x-0 translate-y-[-50%]  mobile:w-full mobile:   laptop:w-96  laptop:left-40 text-white ">
@@ -95,4 +95,3 @@ export default function Slider() {
     </div>
   );
 }
-/* mobile:mx-auto mobile:flex mobile:justify-center mobile:items-center mobile:flex-col */

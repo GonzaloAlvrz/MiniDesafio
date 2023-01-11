@@ -1,9 +1,10 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import Banner from "./components/Banner";
 import BoxHigh from "./components/BoxHigh";
 import Videos from "./components/Videos";
-import Carousel from "./components/carousel/Carousel";
+import Carousel from "./components/carousel/carouselVideo/CarouselVideo";
+import CarouselReleases from "./components/carousel/carouselReleases/CarouselReleases";
 import CarouselNews from "./components/carousel/carouselNews/CarouselNews";
 import Slider from "./components/Slider";
 import LowBanner from "./components/LowBanner";
@@ -32,10 +33,13 @@ export default function Home() {
           <Videos />
         </div>
         <div className="mt-64">
-          <h2 className="font-bold text-4xl ml-36">
+          <h2 className="font-bold text-4xl desktop-two:ml-36">
             LATEST TRAILERS, CLIPS & MORE
           </h2>
-          <Carousel />
+          {<Carousel />}
+        </div>
+        <div>
+          <CarouselReleases />
         </div>
         <div className="relative bottom-36">
           <Slider />
@@ -44,10 +48,10 @@ export default function Home() {
           <CarouselNews />
         </div>
         <div>
-          <LowBanner/>
+          <LowBanner />
         </div>
-        <div >
-          <Footer/>
+        <div>
+          <Footer />
         </div>
       </div>
     </div>
