@@ -33,7 +33,7 @@ export default function Silder() {
   return (
   
       <div className="mt-10">
-        <h2 className="font-bold text-4xl desktop-two:ml-36">NEW RELEASES FROM DC UNIVERSE INFINITE ULTRA</h2>
+        <h2 className="font-bold text-4xl desktop-two:ml-36 mobile:mx-3" >NEW RELEASES FROM DC UNIVERSE INFINITE ULTRA</h2>
         <Carousel
           className="mobile:w-full desktop-two:w-[1400px]  mx-auto"
           responsive={responsive}

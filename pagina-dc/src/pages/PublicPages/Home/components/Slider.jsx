@@ -4,6 +4,9 @@ import ArrowR from "../img/slider/arrowRight.svg";
 import Point from "../img/slider/point.svg";
 import Button from "./Button";
 export default function Slider() {
+  const click = () => {
+    console.log("Click en botón");
+  };
   const slides = [
     {
       url: "https://www.lascosasquenoshacenfelices.com/wp-content/uploads/2022/10/black-adam-movie-review-003.jpg",
@@ -75,7 +78,7 @@ export default function Slider() {
         <h3 className="mb-3  mobile:flex mobile:justify-center laptop:justify-start mobile:text-sm" >{slides[currentIndex].title}</h3>
         <h2 className="laptop:text-6xl mb-3  mobile:flex mobile:justify-center laptop:justify-start mobile:text-2xl">{slides[currentIndex].bigTitle}</h2>
         <p className="mb-3 mobile:hidden laptop:block">{slides[currentIndex].text}</p>
-        <div className="mobile:flex mobile:justify-center laptop:justify-start">
+        <div onClick={click} className="mobile:flex mobile:justify-center laptop:justify-start">
         <Button  d='w-10' title={slides[currentIndex].name}/>
         </div>
       </div>

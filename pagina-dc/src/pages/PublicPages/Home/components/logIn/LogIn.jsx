@@ -1,7 +1,38 @@
-import React from "react";
-import { Formik, From, Field } from "formik";
+import { React, useState }  from "react";
+import { useAuth } from "../../../../../context/authContext";
+import{useNavigate} from 'react-router-dom'
 
-export default function LogIn({ logIn, setLogIn }) {
+export default function LogIn({ setLogIn }) {
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [error, setError] = useState();
+
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  
+
+  const handleChange = ({ target: { name, value } }) =>
+    setUser({ ...user, [name]: value });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await login(user.email, user.password);
+
+      navigate("/");
+    } catch (error) {
+      setError(error.message);
+      navigate("/charactes");
+    }
+  };
+
+
+
+
   return (
     <div className="w-full h-screen relative bottom-[126px] bg-slate-50/50">
       <div className="bg-gray-300 mx-auto w-[450px] h-[600px] relative top-32 flex flex-col">
@@ -22,32 +53,26 @@ export default function LogIn({ logIn, setLogIn }) {
           </div>
         </div>
         <div className="bg-yellow text-center text-2xl mt-6">
+          <h5>{error && <p>{error}</p>}</h5>
           <h3>INICIA SESIÓN EN DC UNIVERSE</h3>
         </div>
         <p className="text-center">
           ¿Aún no eres miembro? <span>Crear una cuenta</span>
         </p>
 
-        <div className="flex flex-col mx-auto">
-          <input
-            className="w-72 mb-2"
-            type="email"
-            placeholder="email"
-            name=""
-            id=""
-          />
-          <input
-            className="w-72"
-            type="password"
-            placeholder="*****"
-            name=""
-            id=""
-          />
+        <div className="mx-auto">
+        <form className="flex flex-col mx-auto" onSubmit={handleSubmit}>
+        <label htmlFor="email">Email</label>
+        <input onChange={handleChange} type="email" name="email" />
+
+        <label htmlFor="password">password</label>
+        <input onChange={handleChange} type="password" name="password" />
+
+        <button>login</button>
+      </form>
         </div>
         <div>
-          <div className="h-10 w-20 border-2 border-black flex justify-center mx-auto mt-20">
-            <button>asdas</button>
-          </div>
+
           <div>
             <h4 className="text-center mt-7">
               Al hacer clic en 'INICIAR SESIÓN' arriba, usted acepta los

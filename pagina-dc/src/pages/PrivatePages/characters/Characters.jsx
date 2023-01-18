@@ -5,27 +5,33 @@ import Community from "./components/Community";
 import Banner from "./components/bannerBlue/BannerBlue";
 import Who from "./components/who/Who";
 import BrowseCharacters from "./browseCharacters/BrowseCharacters";
+import Footer from "./components/footer/Footer";
+import Social from './components/footer/Social'
 
 export default function Characters() {
   return (
     <div>
-      <header>
+      <header className="fixed w-full z-30 ">
         <HeaderCharacters />
       </header>
-      <div>
+     <div>
         <SliderCharacters />
       </div>
-      <div>
+     <div>
         <Community />
       </div>
-      <div>
+        <div>
         <Banner />
       </div>
-      <div>
+       <div>
         <Who />
       </div>
-      <div>
+     <div>
         <BrowseCharacters />
+      </div>
+      <div>
+        <Footer/>
+        <Social/>
       </div>
     </div>
   );

@@ -7,10 +7,34 @@ import OptionsMovTv from "./OptionsMovTv";
 import OptionsShop from "./OptionsShop";
 import OptionsMore from "./OptionsMore";
 import HeaderResponsive from "./headerResponsive/HeaderResponsive";
-import LogIn from "../logIn/LogIn";
+/* import LogIn from "../logIn/LogIn";
+import Register from '../register/Register' */
+import Register from '../register/Re'
+import Login from "../logIn/Log";
 import {Link} from 'react-router-dom'
+/* import AgeGate from "../ageGate/AgeGate"; */
+
 
 export default function Header() {
+/* click */
+
+  const clickGames = () => {
+    console.log('click en GAMES')
+  };
+
+
+  const clickNews = () => {
+    console.log('click en NEWS')
+  };
+
+  const clickVideo = () => {
+    console.log('click en VIDEO')
+  };
+ 
+  const clickCommunity = () => {
+    console.log('click en COMMUNITY')
+  };
+ /*  options */
   const [optionsComics, setOptionsComics] = useState(false);
   const clickOptionsComics = () => {
     setOptionsComics(!optionsComics);
@@ -33,12 +57,21 @@ export default function Header() {
   const clickLogIn = () => {
     setLogIn(!logIn);
   };
+
+  /* sign up */
+  const [signUp, setSignUp] = useState(false);
+  const clickSignUp = () => {
+    setSignUp(!signUp);
+  };
+
+
+
   return (
     <>
 
       <div className="h-16 bg-white flex flex-row mx-auto desktop-two:flex desktop-two:items-center mobile:hidden">
         {/* Vista web */}
-       <Link to='/home'><img src={Icon} alt="" className="h-10 mt-2 ml-20 mr-12 pl-10 " /></Link> 
+       <Link to='/'><img src={Icon} alt="" className="h-10 mt-2 ml-20 mr-12 pl-10 " /></Link> 
         
         <div className="flex flex-row items-center">
           <h3 onClick={clickLogIn} className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB] ">
@@ -62,6 +95,7 @@ export default function Header() {
               </svg>
             </button>
             <div>{optionsComics ? <OptionsComics /> : ""}</div>
+            <div>{optionsComics ? (console.log('Click en Comics')) : ""}</div>
           </div>
           <div className="flex flex-col">
             <button
@@ -81,14 +115,15 @@ export default function Header() {
               </svg>
             </button>
             <div>{optionsMovTv ? <OptionsMovTv /> : ""}</div>
+            <div>{optionsMovTv ? (console.log('Click en Movies y & TV')) : ""}</div>
           </div>
-          <h3 className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
+          <h3 onClick={clickGames} className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
             GAMES
           </h3>
-          <h3 className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
+          <h3 onClick={clickNews} className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
             NEWS
           </h3>
-          <h3 className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
+          <h3 onClick={clickVideo} className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
             VIDEO
           </h3>
           <div className="flex flex-col">
@@ -109,8 +144,9 @@ export default function Header() {
               </svg>
             </button>
             <div>{optionsShop ? <OptionsShop /> : ""}</div>
+            <div>{optionsShop ? (console.log('Click en SHOP')): ""}</div>
           </div>
-          <h3 className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
+          <h3 onClick={clickCommunity} className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
             COMMUNITY
           </h3>
           <div className="flex flex-col">
@@ -131,13 +167,14 @@ export default function Header() {
               </svg>
             </button>
             <div>{optionsMore ? <OptionsMore /> : ""}</div>
+            <div>{optionsMore ? (console.log('Click en MORE')): ""}</div>
           </div>
           <div className="w-80 mx-4 ">
             <img src={Search} alt="search" className="relative left-72" />
           </div>
-          <h3 className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
+          <button onClick={clickSignUp} className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
             SIGN UP
-          </h3>
+          </button>
           <div className="flex flex-col" >
             <button onClick={clickLogIn} className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB]">
               LOG IN
@@ -151,7 +188,9 @@ export default function Header() {
       <div>
         <HeaderResponsive />
       </div>
-      <div className="mx-auto mt-20">{logIn ? <LogIn setLogIn={setLogIn}/> : ''}</div>
+      <div className="mx-auto mt-20">{logIn ? <Login setLogIn={setLogIn}/> : ''}</div>
+      <div className="mx-auto mt-20">{signUp ? <Register setSignUp={setSignUp}/> : ''}</div>
+
     </>
   );
 }
