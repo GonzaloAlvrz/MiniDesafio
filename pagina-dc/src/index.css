@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dark{
+    background-color: rgb(38 38 38);
+    color: #ffffff;
+}
+
+.light{
+    background-color: rgb(143, 143, 143);
+    color: black;
+}

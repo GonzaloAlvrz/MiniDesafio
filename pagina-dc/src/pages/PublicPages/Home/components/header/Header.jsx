@@ -12,6 +12,7 @@ import Register from '../register/Register' */
 import Register from '../register/Re'
 import Login from "../logIn/Log";
 import {Link} from 'react-router-dom'
+import ModoOscuro from "../../../../../modoOscuro/ModoOscuro";
 /* import AgeGate from "../ageGate/AgeGate"; */
 
 
@@ -63,13 +64,16 @@ export default function Header() {
   const clickSignUp = () => {
     setSignUp(!signUp);
   };
+ /*  modo oscuro */
+
+ const [modo, setModo] = useState(false);
 
 
 
   return (
     <>
 
-      <div className="h-16 bg-white flex flex-row mx-auto desktop-two:flex desktop-two:items-center mobile:hidden">
+      <div className="h-16 bg-white dark:bg-red-500  flex flex-row mx-auto desktop-two:flex desktop-two:items-center mobile:hidden">
         {/* Vista web */}
        <Link to='/'><img src={Icon} alt="" className="h-10 mt-2 ml-20 mr-12 pl-10 " /></Link> 
         
@@ -180,6 +184,9 @@ export default function Header() {
               LOG IN
             </button>
             
+          </div>
+          <div>
+          <ModoOscuro modo={modo} setModo={setModo} />
           </div>
         </div>
       </div>

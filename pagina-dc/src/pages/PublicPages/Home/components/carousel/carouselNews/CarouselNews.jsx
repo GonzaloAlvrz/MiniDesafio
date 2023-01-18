@@ -32,6 +32,7 @@ export default function Silder() {
       title={item.title}
       url={item.imageurl}
       description={item.description}
+      button={item.button}
     />
   ));
   return (
