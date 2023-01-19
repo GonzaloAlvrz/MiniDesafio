@@ -54,7 +54,7 @@ export default function Menu() {
   };
 
   return (
-    <div className="absolute top-11 left-0 w-full min-h-screen bg-white  border-t-2 border-gray-200 overflow-y-scroll">
+    <div className="absolute top-11 left-0 w-full min-h-screen dark:bg-slate-800  bg-white  border-t-2 border-gray-200 overflow-y-scroll">
       <div className="border-b-2 border-gray-200">
         <ul className="ml-4">
           <li className="my-3 hover:text-[#17ABEB]">CHARACTERS</li>

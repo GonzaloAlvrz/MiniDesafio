@@ -42,8 +42,9 @@ export default function Filters() {
                 <p className="lap_tablet:mr-[151px] mobile:mr-[280px]">NAMES</p>
                 <div className="flex justify-end">
                   {names ? (
-                    <div className="">
+                    <div>
                       <svg
+                      className="fill-black dark:fill-white"
                         width="25"
                         height="30"
                         viewBox="0 0 5 2"
@@ -52,13 +53,14 @@ export default function Filters() {
                       >
                         <path
                           d="M4.67045 0.789773V1.72727H0.852273V0.789773H4.67045Z"
-                          fill="black"
+                          
                         />
                       </svg>
                     </div>
                   ) : (
                     <div className=" flex items-center h-10">
                       <svg
+                      className="fill-black dark:fill-white"
                         width="25"
                         height="25"
                         viewBox="0 0 6 7"
@@ -67,7 +69,7 @@ export default function Filters() {
                       >
                         <path
                           d="M2.47727 6.40341V0.778409H3.43182V6.40341H2.47727ZM0.142046 4.06818V3.11364H5.76705V4.06818H0.142046Z"
-                          fill="black"
+                         
                         />
                       </svg>
                     </div>
@@ -86,8 +88,9 @@ export default function Filters() {
                 <p className="lap_tablet:mr-28 mobile:mr-[242px]">ALIGNMENT</p>
                 <div className="flex justify-end">
                   {alignment ? (
-                    <div className="b">
+                    <div className="">
                       <svg
+                      className="fill-black dark:fill-white"
                         width="25"
                         height="30"
                         viewBox="0 0 5 2"
@@ -96,13 +99,14 @@ export default function Filters() {
                       >
                         <path
                           d="M4.67045 0.789773V1.72727H0.852273V0.789773H4.67045Z"
-                          fill="black"
+                         
                         />
                       </svg>
                     </div>
                   ) : (
                     <div className=" flex items-center  h-10">
                       <svg
+                      className="fill-black dark:fill-white"
                         width="25"
                         height="25"
                         viewBox="0 0 6 7"
@@ -111,7 +115,7 @@ export default function Filters() {
                       >
                         <path
                           d="M2.47727 6.40341V0.778409H3.43182V6.40341H2.47727ZM0.142046 4.06818V3.11364H5.76705V4.06818H0.142046Z"
-                          fill="black"
+                         
                         />
                       </svg>
                     </div>
@@ -132,6 +136,7 @@ export default function Filters() {
                   {type ? (
                     <div className="">
                       <svg
+                        className="fill-black dark:fill-white"
                         width="25"
                         height="30"
                         viewBox="0 0 5 2"
@@ -140,13 +145,14 @@ export default function Filters() {
                       >
                         <path
                           d="M4.67045 0.789773V1.72727H0.852273V0.789773H4.67045Z"
-                          fill="black"
+                         
                         />
                       </svg>
                     </div>
                   ) : (
                     <div className=" flex items-center  h-10">
                       <svg
+                        className="fill-black dark:fill-white"
                         width="25"
                         height="25"
                         viewBox="0 0 6 7"
@@ -155,7 +161,7 @@ export default function Filters() {
                       >
                         <path
                           d="M2.47727 6.40341V0.778409H3.43182V6.40341H2.47727ZM0.142046 4.06818V3.11364H5.76705V4.06818H0.142046Z"
-                          fill="black"
+                          
                         />
                       </svg>
                     </div>
@@ -176,6 +182,7 @@ export default function Filters() {
                   {status ? (
                     <div className="">
                       <svg
+                        className="fill-black dark:fill-white"
                         width="25"
                         height="30"
                         viewBox="0 0 5 2"
@@ -184,13 +191,14 @@ export default function Filters() {
                       >
                         <path
                           d="M4.67045 0.789773V1.72727H0.852273V0.789773H4.67045Z"
-                          fill="black"
+                         
                         />
                       </svg>
                     </div>
                   ) : (
                     <div className=" flex items-center h-10">
                       <svg
+                        className="fill-black dark:fill-white"
                         width="25"
                         height="25"
                         viewBox="0 0 6 7"
@@ -199,7 +207,7 @@ export default function Filters() {
                       >
                         <path
                           d="M2.47727 6.40341V0.778409H3.43182V6.40341H2.47727ZM0.142046 4.06818V3.11364H5.76705V4.06818H0.142046Z"
-                          fill="black"
+                        
                         />
                       </svg>
                     </div>

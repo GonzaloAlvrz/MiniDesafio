@@ -1,26 +1,10 @@
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {
-      colors:{
-        yellow: '#FFEB33',
-        green: '#0BA4A0',
-        blue:'#2E384D',
-        letrafooter: '#1EC5BB',
-        lightgray: '#8798AD',
-        graybackground:'#DADEEB',
-        imgheader: '#DADEEB',
-        bordergray: '#E4E8F0',
-        inputbackground: '#F9FBFD',
-        backgroundGray:'#E9F9F8',
-        hoverlogout:'#F8FAFC',
-        colorList:'#0088ff',
-        disabledbutton: '#AFAFAF',
-        bgTable:'#E8EFF6',
-        bgStudents: '#F4F7FB'
-      },
       screens: {
         'mobile': '360px',
         'mobileM': '475px',

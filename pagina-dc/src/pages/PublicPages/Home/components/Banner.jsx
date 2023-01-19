@@ -29,11 +29,11 @@ export default function Banner() {
       </div>
       {/* Texto de la img Responsive*/}
       <div className="mt-4 mobile:block laptop:hidden mobile:w-[320px] tablet:w-[440px] mobile:mx-auto ">
-        <h2 className="text-xl text-black text-center">MY TOP THREE</h2>
-        <h1 className="text-3xl font-extrabold mt-2 text-black ">
+        <h2 className="text-xl text-black text-center dark:text-white ">MY TOP THREE</h2>
+        <h1 className="text-3xl font-extrabold mt-2 text-black dark:text-white">
           CATS, DOGS AND CONJURERS
         </h1>
-        <h3 className="text-justify mt-2 text-black">
+        <h3 className="text-justify mt-2 text-black dark:text-white">
           Kelly Knox's favorite DC projects of 2022 included a teen take on a
           famous magician and two VERY different furry fables.
         </h3>

@@ -3,7 +3,7 @@ import React from 'react'
 export default function OptionsShopCharacters() {
     return (
         <div>
-          <div className="bg-gray-200 w-48 absolute top-[120px] left-[950px] ">
+          <div className="bg-gray-200 dark:bg-slate-800 w-48 absolute top-[120px] left-[870px] ">
             <ul>
               <li className="my-3 ml-3 hover:text-[#17ABEB]">DC SHOP</li>
               <li className="my-3 ml-3 hover:text-[#17ABEB]">NEW ARRIVALS</li>
