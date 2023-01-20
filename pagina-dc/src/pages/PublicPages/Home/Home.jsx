@@ -9,7 +9,9 @@ import CarouselNews from "./components/carousel/carouselNews/CarouselNews";
 import Slider from "./components/Slider";
 import LowBanner from "./components/LowBanner";
 import Footer from "./components/Footer";
+
 export default function Home() {
+
   return (
     <div>
       <header>
