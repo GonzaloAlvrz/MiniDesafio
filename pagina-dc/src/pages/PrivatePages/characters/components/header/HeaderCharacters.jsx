@@ -205,6 +205,9 @@ export default function HeaderCharacters() {
           >
             LOG OUT
           </h3>
+          <h3 className="mr-5">
+           <Link to='/account'>CUENTA</Link> 
+          </h3>
           <div>
             <ModoOscuro modo={modo} setModo={setModo} />
           </div>

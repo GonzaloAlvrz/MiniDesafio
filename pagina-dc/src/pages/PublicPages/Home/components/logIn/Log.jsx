@@ -17,7 +17,7 @@ export default function Login({ setLogIn }) {
 
   const [error, setError] = useState();
 
-  const { login, loginWhitGoogle } = useAuth();
+  const { login, loginWhitGoogle, resetPassword } = useAuth();
   const navigate = useNavigate();
 
   /*      const authContext = useAuth()
@@ -41,16 +41,25 @@ export default function Login({ setLogIn }) {
     }
   };
 
-
   const handleGoogleSignin = async () => {
-    try{
-  await loginWhitGoogle()
-  navigate("/characters", { replace: true });
-    }catch (error){
-     setError(error.message)
-     navigate("/", { replace: true });
-  }
-}
+    try {
+      await loginWhitGoogle();
+      navigate("/characters", { replace: true });
+    } catch (error) {
+      setError(error.message);
+      navigate("/", { replace: true });
+    }
+  };
+
+  const handleResetPassword = async () => {
+    if (!user.email) return setError("Ingresa email");
+    try {
+      await resetPassword(user.email);
+      setError("mail enviado");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
 
   /*   const DisplayingErrorMessagesSchema = Yup.object({
     email: Yup.string()
@@ -95,7 +104,6 @@ export default function Login({ setLogIn }) {
               name="email"
               placeholder="Introduce tu correo electrónico"
             />
-
             <input
               onChange={handleChange}
               className="w-5/6 mx-auto my-3"
@@ -114,9 +122,12 @@ export default function Login({ setLogIn }) {
               )}
             </div>
             <label className="text-sm ml-8 relative bottom-5 text-[#17ABEB]">
-              ¿Has olvidado tu contrseña?
+              <a href="#!" onClick={handleResetPassword}>
+                ¿Has olvidado tu contrseña?
+              </a>
             </label>
-            {error && <p>{error}</p>}
+            <div className="mx-auto mb-2">{error && <p className="text-red-500">{error}</p>}</div>
+
             <button className="w-36 h-12 bg-[#17ABEB] mx-auto rounded-full text-white">
               LOG IN
             </button>
@@ -137,7 +148,12 @@ export default function Login({ setLogIn }) {
           </div>
         </div>
         <div>
-          <button onClick={handleGoogleSignin} className="flex justify-center items-center mx-auto bg-[#17ABEB] mt-2 text-white w-54 h-8 rounded-full px-3 ">Ingresa con Google</button>
+          <button
+            onClick={handleGoogleSignin}
+            className="flex justify-center items-center mx-auto bg-[#17ABEB] mt-2 text-white w-54 h-8 rounded-full px-3 "
+          >
+            Ingresa con Google
+          </button>
         </div>
       </div>
     </div>
