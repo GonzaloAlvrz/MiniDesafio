@@ -2,8 +2,9 @@ import { React, useState } from "react";
 import Button from "../../Button";
 import Login from "../../logIn/Log";
 import Register from "../../register/Re";
-
+import ModoOscuro from "../../../../../../modoOscuro/ModoOscuro";
 export default function Menu() {
+  /* show in the console the text */
   const clickGames = () => {
     console.log("click en GAMES");
   };
@@ -28,7 +29,7 @@ export default function Menu() {
   const clickOrigin = () => {
     console.log('click en ORIGIN')
   };
-
+/* show the options */
   const [optionsComic, setOptionsComic] = useState(false);
   const clickOptionComic = () => {
     setOptionsComic(!optionsComic);
@@ -52,17 +53,20 @@ export default function Menu() {
   const clickSignUp = () => {
     setSignUp(!signUp);
   };
-
+  const [modo, setModo] = useState(false);
   return (
     <div className="absolute top-11 left-0 w-full min-h-screen dark:bg-slate-800  bg-white  border-t-2 border-gray-200 overflow-y-scroll">
       <div className="border-b-2 border-gray-200">
+        {/* sections */}
         <ul className="ml-4">
+          {/* Dark mode */}
+        <li className="flex flex-row mt-2">DARK MODE <ModoOscuro modo={modo} setModo={setModo} />: {modo ? 'ON' : 'OFF'}</li>
           <li className="my-3 hover:text-[#17ABEB]">CHARACTERS</li>
           <li onClick={clickOptionComic} className=" flex flex-col">
             <div className="mb-3 hover:text-[#17ABEB] flex flex-row">
               COMICS
               <svg
-                className="fill-black hover:fill-[#17ABEB]"
+                className="fill-black dark:fill-white hover:fill-[#17ABEB]"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -74,6 +78,7 @@ export default function Menu() {
               <div>{optionsComic ? (console.log('Click en Comics')) : ""}</div>
             </div>
             <div className={optionsComic ? "block" : "hidden"}>
+              {/* options */}
               <ul className="ml-6">
                 <li>LATEST COMICS</li>
                 <li>DC UNIVERSE INFINITE</li>
@@ -90,7 +95,7 @@ export default function Menu() {
             <div className=" hover:text-[#17ABEB] flex flex-row">
               MOVIES & TV
               <svg
-                className="fill-black hover:fill-[#17ABEB]"
+                className="fill-black dark:fill-white hover:fill-[#17ABEB]"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -101,6 +106,7 @@ export default function Menu() {
               </svg>
             </div>
             <div className={optionsMoTv ? "block" : "hidden"}>
+              {/* options */}
               <ul className="ml-6">
                 <li>DC MOVIES</li>
                 <li>DC SERIES</li>
@@ -117,7 +123,7 @@ export default function Menu() {
             <div className="hover:text-[#17ABEB] flex flex-row">
               SHOP
               <svg
-                className="fill-black hover:fill-[#17ABEB]"
+                className="fill-black dark:fill-white hover:fill-[#17ABEB]"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -129,6 +135,7 @@ export default function Menu() {
             </div>
             <div className={optionShop ? "block" : "hidden"}>
             <div>{optionShop ? (console.log('Click en SHOP')): ""}</div>
+              {/* options */}
               <ul className="ml-6">
                 <li>DC SHOP</li>
                 <li>NEWS ARRIVALS</li>
@@ -147,12 +154,14 @@ export default function Menu() {
         </ul>
       </div>
       <div className="flex mobile:flex-col tablet:flex-row justify-center mt-10">
+        {/* login button */}
         <div
           onClick={clickLogIn}
           className="tablet:mr-4 mobile:flex mobile:justify-center"
         >
           <Button title="Iniciar sesión" />
         </div>
+        {/* register button */}
         <div
           onClick={clickSignUp}
           className="tablet:ml-4 mobile:flex mobile:justify-center mobile:mt-4 tablet:mt-0"
@@ -160,9 +169,11 @@ export default function Menu() {
           <Button title="Registrate" />
         </div>
       </div>
+      {/* show the login */}
       <div className="mx-auto relative mobile:bottom-[478px] tablet:bottom-[420px]">
         {logIn ? <Login setLogIn={setLogIn} /> : ""}
       </div>
+      {/* show the register */}
       <div className="mx-auto relative mobile:bottom-[478px] tablet:bottom-[420px]">
         {signUp ? <Register setSignUp={setSignUp} /> : ""}
       </div>

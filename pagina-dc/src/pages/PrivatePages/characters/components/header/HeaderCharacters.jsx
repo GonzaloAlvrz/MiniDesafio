@@ -4,7 +4,6 @@ import OptionsComicCharacters from "../header/OptionsComicCharacters";
 import OptionsMoreCharacters from "../header/OptionsMoreCharacters";
 import OptionsMovTvCharacters from "../header/OptionsMovTvCharacters";
 import OptionsShopCharacters from "../header/OptionsShopCharacters";
-import Search from "../../img/header/search.svg";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../../../../context/authContext";
 import { useNavigate } from "react-router-dom";
@@ -197,7 +196,7 @@ export default function HeaderCharacters() {
               />
             </svg>
             </div>
-          {/*   <img src={Search} alt="search" className="relative left-2" /> */}
+       
           </div>
           <h3
             onClick={handleLogout}
@@ -205,8 +204,8 @@ export default function HeaderCharacters() {
           >
             LOG OUT
           </h3>
-          <h3 className="mr-5">
-           <Link to='/account'>CUENTA</Link> 
+          <h3 className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB] hover:underline hover:underline-offset-[40px]">
+           <Link to='/account'>ACCOUNT</Link> 
           </h3>
           <div>
             <ModoOscuro modo={modo} setModo={setModo} />

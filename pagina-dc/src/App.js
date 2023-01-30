@@ -1,4 +1,3 @@
-/* import Home from './pages/PublicPages/Home/Home' */
 import Router from './router/Router';
 import './App.css';
 

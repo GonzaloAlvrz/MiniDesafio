@@ -2,7 +2,7 @@ import React from 'react'
 import Icon from '../img/footer/dc-logo.svg'
 export default function Footer() {
   return (
-    <div className='h-72 w-full bg-black text-white flex justify-center items-center flex-col'>
+    <div className='h-72 w-full bg-black text-white flex justify-center items-center flex-col px-4'>
       <img src={Icon} alt="" />
       <div>
         <span>PRIVACITY POLICY |</span>

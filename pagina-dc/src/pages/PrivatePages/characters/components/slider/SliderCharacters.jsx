@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ArrowL from "../../img/slider/arrowLeft.svg";
 import ArrowR from "../../img/slider/arrowRight.svg";
 import Point from "../../img/slider/point.svg";
-import Button from "../../../../PublicPages/Home/components/Button";
+import { Link } from "react-router-dom";
 export default function Slider() {
   const slides = [
     {
@@ -62,7 +62,7 @@ export default function Slider() {
         <h2 className="laptop:text-6xl mb-3  mobile:flex mobile:justify-center laptop:justify-start mobile:text-2xl">{slides[currentIndex].bigTitle}</h2>
         <p className="mb-3 mobile:hidden laptop:block">{slides[currentIndex].text}</p>
         <div className="mobile:flex mobile:justify-center laptop:justify-start">
-        <button className="h-10 w-28 bg-[#17ABEB]">{slides[currentIndex].name}</button>
+        <Link to='/404-not-found-Error'><button className="h-10 w-28 bg-[#17ABEB]">{slides[currentIndex].name}</button></Link>
         </div>
       </div>
       <div className="flex top-4 justify-center py-2">

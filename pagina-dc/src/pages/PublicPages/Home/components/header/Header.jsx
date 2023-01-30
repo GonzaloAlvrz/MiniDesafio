@@ -13,7 +13,6 @@ import Register from "../register/Re";
 import Login from "../logIn/Log";
 import { Link } from "react-router-dom";
 import ModoOscuro from "../../../../../modoOscuro/ModoOscuro";
-/* import AgeGate from "../ageGate/AgeGate"; */
 
 export default function Header() {
   /* click */
@@ -62,18 +61,20 @@ export default function Header() {
   const clickSignUp = () => {
     setSignUp(!signUp);
   };
-  /*  modo oscuro */
+  /*  Dark mode */
 
   const [modo, setModo] = useState(false);
 
   return (
     <>
       <div className="h-16 bg-white  dark:bg-slate-800 flex flex-row mx-auto desktop-two:flex desktop-two:items-center mobile:hidden">
-        {/* Vista web */}
+        {/* web view */}
+
+        {/* icon DC */}
         <Link to="/">
           <img src={Icon} alt="" className="h-10 mt-2 ml-20 mr-12 pl-10 " />
         </Link>
-
+         {/* sections */}
         <div className="flex flex-row items-center">
           <h3
             onClick={clickLogIn}
@@ -217,6 +218,7 @@ export default function Header() {
               LOG IN
             </button>
           </div>
+          {/* Darck mode */}
           <div>
             <ModoOscuro modo={modo} setModo={setModo} />
           </div>

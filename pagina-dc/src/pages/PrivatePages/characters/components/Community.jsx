@@ -5,7 +5,7 @@ export default function Community() {
     <div className="desktop-one:h-[470px] mobile:h-[1200px] w-full  my-3 flex justify-center items-center">
       <div className="flex desktop-one:flex-row  mobile:flex-col">
         <div className=" lap_tablet:h-96 mobile:h-[750px]">
-          <h3>ENTER THE WORLD OF THE BATMAN</h3>
+          <h3 className="mobile:ml-4 mobileL:ml-1">ENTER THE WORLD OF THE BATMAN</h3>
           <div>
             <ul className="flex lap_tablet:flex-row text-xs mobile:justify-center mobile:mx-auto lap_tablet:mx-0 ">
               <div className="flex mobile:flex-col lap_tablet:flex-row mobile:mx-4 lap_tablet:mx-0">
@@ -79,7 +79,7 @@ export default function Community() {
         <div className=" h-96 desktop-one:w-96 lap_tablet:w-[665px] desktop-one:ml-5 mobile:mx-auto">
           <div className="flex flex-row mobile:mx-4">
             <h2 className="mt-5 w-1/2 text-3xl">COMMUNITY</h2>
-            <h4 className="flex justify-end w-1/2 mt-8">SEE ALL</h4>
+            <h4 className="flex justify-end w-1/2 mt-8 text-[#17ABEB]">SEE ALL</h4>
           </div>
           <div className="mobile:mx-4">
             <div className="mb-3">

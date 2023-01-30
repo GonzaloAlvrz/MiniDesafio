@@ -14,4 +14,3 @@ export default function ComponentNames({letra}) {
   )
 }
 
-/* 'h-10 w-10 bg-gray-300 flex justify-center items-center ' */

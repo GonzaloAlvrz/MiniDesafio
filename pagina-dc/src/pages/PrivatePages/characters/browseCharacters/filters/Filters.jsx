@@ -1,7 +1,5 @@
 import { React, useState } from "react";
 import Names from "./Names";
-import Mas from "./img/mas.svg";
-import Menos from "./img/menos.svg";
 import Alignment from "./Alignment";
 import Type from "./Type";
 import Status from "./Status";

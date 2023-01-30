@@ -1,7 +1,4 @@
 import { React, useState } from "react";
-import MenuIcon from "./img/menu.svg";
-import Icon from "./img/dc-logo.svg";
-import Search from "./img/search.svg";
 import Menu from "./Menu";
 
 export default function HeaderResponsive() {
@@ -11,7 +8,7 @@ export default function HeaderResponsive() {
   };
 
   return (
-    <div className="bg-white dark:bg-slate-800  w-full h-11 mobile:flex mobile:items-center desktop-two:hidden mobile:block relative  mobile:bottom-28 tablet:bottom-20 desktop-one:bottom-0">
+    <div className="bg-white dark:bg-slate-800  w-full h-12 mobile:flex mobile:items-center desktop-two:hidden relative  mobile:bottom-28 tablet:bottom-20 desktop-one:bottom-0 border-b-[1px] border-black/30 drop-shadow-md">
       <div onClick={clickMenu}>    
       <svg width="24" className="h-10 ml-4 fill-black  dark:fill-white" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 11H16V13H4V11ZM4 6H20V8H4V6ZM4 18H11.235V16H4V18Z"/>

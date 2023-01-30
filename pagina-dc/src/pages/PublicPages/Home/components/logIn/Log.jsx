@@ -69,8 +69,9 @@ export default function Login({ setLogIn }) {
   }); */
 
   return (
-    <div className="w-full h-screen relative bottom-[126px] dark:bg-slate-800/50  bg-slate-50/50">
-      <div className="bg-gray-200 dark:bg-slate-800 mx-auto mobile:w-[350px] mobileL:w-[450px] mobile:h-[620px] mobileL:h-[600px] relative mobile:top-10 desktop-two:top-32 flex flex-col">
+    <div className="w-full h-screen relative  mobile:bottom-[162px] desktop-two:bottom-[126px] dark:bg-slate-800/50  bg-slate-50/50">
+      <div className="bg-gray-200 dark:bg-slate-800 px-2 mx-auto mobile:border-2 mobile:border-white mobile:w-[350px] mobileL:w-[450px] mobile:h-[620px] mobileL:h-[600px] relative mobile:top-10 desktop-two:top-32 flex flex-col">
+        {/* x icon */}
         <div className=" flex justify-end mr-5 py-5">
           <div onClick={() => setLogIn(false)}>
             <svg
@@ -93,6 +94,7 @@ export default function Login({ setLogIn }) {
         </p>
 
         <div className="mx-auto w-full">
+        {/* login form */}
           <form
             className="flex flex-col dark:text-black"
             onSubmit={handleSubmit}
@@ -112,7 +114,7 @@ export default function Login({ setLogIn }) {
               placeholder="Introduce tu contraseña"
             />
             <div
-              className="pt-2 z-20 relative mobile:left-[290px] mobile:bottom-10 mobileL:left-96"
+              className="pt-2 z-20 relative mobile:left-[280px] mobile:bottom-10 mobileL:left-[370px]"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? (

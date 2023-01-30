@@ -1,8 +1,6 @@
 import { React, useState } from "react";
-/* import { useContext } from 'react' */
 import { useAuth } from "../../../../../context/authContext";
 import { useNavigate } from "react-router-dom";
-/* import { Formik, Form, Field } from "formik"; */
 import OpenEyes from "../../img/logRe/open_eyes.svg";
 import CloseEyes from "../../img/logRe/close_eyes.svg";
 
@@ -16,8 +14,6 @@ export default function Register({ setSignUp }) {
   const { signup } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState();
-  /*    const authContext = useAuth()
-    console.log(authContext) */
 
   const handleChange = ({ target: { name, value } }) =>
     setUser({ ...user, [name]: value });
@@ -33,8 +29,9 @@ export default function Register({ setSignUp }) {
     }
   };
   return (
-    <div className="w-full h-screen relative bottom-[126px] dark:bg-slate-800/50  bg-slate-50/50">
-      <div className="bg-gray-300 dark:bg-slate-800 mx-auto mobile:w-[370px] mobileL:w-[450px] h-[600px] relative mobile:top-10 desktop-two:top-32 flex flex-col">
+    <div className="w-full h-screen relative mobile:bottom-[162px] desktop-two:bottom-[126px] dark:bg-slate-800/50  bg-slate-50/50 ">
+      <div className="bg-gray-300 dark:bg-slate-800 px-2 mobile:border-2 mobile:border-white mx-auto mobile:w-[370px] mobileL:w-[450px] h-[600px] relative mobile:top-10 desktop-two:top-32 flex flex-col">
+        {/* x icon */}
         <div className=" flex justify-end mr-5 py-5">
           <div onClick={() => setSignUp(false)}>
             <svg
@@ -57,7 +54,11 @@ export default function Register({ setSignUp }) {
         </p>
 
         <div className="mx-auto w-full">
-          <form className="flex flex-col dark:text-black" onSubmit={handleSubmit}>
+        {/* register form */}
+          <form
+            className="flex flex-col dark:text-black"
+            onSubmit={handleSubmit}
+          >
             <input
               onChange={handleChange}
               className="w-5/6 mx-auto my-3"
@@ -74,7 +75,7 @@ export default function Register({ setSignUp }) {
               placeholder="Introduce tu contraseña"
             />
             <div
-              className="pt-2 z-20 relative mobile:left-[290px] mobile:bottom-10 mobileL:left-96"
+              className="pt-2 z-20 relative mobile:left-[290px] mobile:bottom-10 mobileL:left-[360px]"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? (
@@ -107,7 +108,9 @@ export default function Register({ setSignUp }) {
                 required
                 className="ml-10  mr-2"
               />
-              <p className="pr-4 text-justify dark:text-white">Aceptos los Términos de uso.</p>
+              <p className="pr-4 text-justify dark:text-white">
+                Aceptos los Términos de uso.
+              </p>
             </div>
             <button
               type="submit"
@@ -121,33 +124,4 @@ export default function Register({ setSignUp }) {
       </div>
     </div>
   );
-}
-
-{
-  /* <form className="flex flex-col" onSubmit={handleSubmit}>
-<label htmlFor="email">Email</label>
-<input onChange={handleChange} type="email" name="email" />
-
-<label htmlFor="password">password</label>
-<input onChange={handleChange} type="password" name="password" />
-{error && <p>{error}</p>}
-
-<button>Register</button>
-</form> */
-}
-
-{
-  /* <Formik
-            initialValues={{
-              mail: "",
-              password: "",
-            }}
-            onSubmit={handleSubmit}
-          >
-            <Form className="flex flex-col">
-              <Field className="my-4" name="email" type="email" />
-              <Field name="password" type="password" />
-              <button type="submit">Registrate</button>
-            </Form>
-          </Formik> */
 }

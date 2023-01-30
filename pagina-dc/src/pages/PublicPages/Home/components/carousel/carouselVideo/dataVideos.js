@@ -1,25 +1,4 @@
-export const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 1024 },
-      items: 5,
-      slidesToSlide: 2,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 800 },
-      items: 4,
-    },
-    tablet: {
-      breakpoint: { max: 800, min: 464 },
-      items: 3,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-  
-  export const DataCard = [
+export const DataCard = [
     {
       id: 1,
       imageurl:'https://as01.epimg.net/meristation/imagenes/2021/10/06/noticias/1633514535_199538_1633514571_noticia_normal.jpg',

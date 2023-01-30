@@ -13,13 +13,13 @@ export default function Social() {
         <div className="flex items-center flex-row ">
           <div className="absolute right-60 mb-10 flex flex-row items-center">
             <span className="mr-5 text-[#17ABEB]">FOLLOW US</span> 
-            <img src={Facebook} alt="" />
-            <img src={Twitter} alt="" />
-            <img src={Youtube} alt="" />
+           <a href="https://es-la.facebook.com/dc/" target="_blank" > <img src={Facebook} alt="" /></a>
+           <a href="https://twitter.com/dccomics" target="_blank" ><img src={Twitter} alt="" /></a>
+           <a href="https://www.youtube.com/dc" target="_blank" > <img src={Youtube} alt="" /></a>
             </div>
         </div>
       </div>
-      <div className="desktop-two:hidden mobile:block mx-auto">
+      <div className="desktop-two:hidden mobile:block mx-auto px-5 text-white">
         <span> All Site Content © & TM DC, unless otherwise noted here. All rights
         reserved. Gestionar preferencias</span>
       </div>

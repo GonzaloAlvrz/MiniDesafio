@@ -1,7 +1,7 @@
-import { React, setState } from "react";
+import  React from "react";
 import Filters from "./filters/Filters";
 import Apid from "../api/Api";
-import ApiCard from "../api/ApiCard";
+
 
 export default function BrowseCharacters() {
   return (

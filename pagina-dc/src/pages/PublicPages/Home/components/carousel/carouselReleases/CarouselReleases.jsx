@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import { Link } from "react-router-dom";
 import "../../carousel/Carousel.css";
 import CardNewReleases from "../carouselReleases/CardNewReleases";
 import { DataNewReleases } from "../carouselReleases/dataNewReleases";
@@ -25,6 +25,7 @@ export default function Silder() {
       breakpoint: { max:2000, min: 1400 },
       items: 5,
     },
+    
   };
 
   const cardNewReleases = DataNewReleases.map((e) => (
@@ -41,7 +42,7 @@ export default function Silder() {
         >
           {cardNewReleases}
           <div className="flex justify-center items-center mx-10 flex-col w-80  h-[500px] mt-20">
-             <h3 className="text-4xl text-[#0B86A8]">SEE MORE </h3>
+            <Link to='/404-not-found-Error-P'> <h3 className="text-4xl text-[#0B86A8]">SEE MORE </h3></Link>
           </div>
         </Carousel>
       </div>

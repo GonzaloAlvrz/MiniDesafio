@@ -1,11 +1,9 @@
 import Axios from "axios";
 import { React, useState, useEffect } from "react";
-import ApiCard from "./ApiCard";
+
 function App() {
   const [personajes, setPersonajes] = useState([]);
   const [busqueda, setBusqueda] = useState("");
-
-  // const arr = ['hola', 'hola'];
 
   useEffect(() => {
     Axios.get(
@@ -42,12 +40,13 @@ function App() {
 
   return (
     <div>
-      <div /* className="relative bottom-24 left-80" */>
+      <div>
         <input
-        className="ml-8 relative bottom-4"
+        className="ml-8 relative bottom-4 text-black"
           value={busqueda}
           placeholder="Búsqueda por Nombre"
           onChange={handleChange}
+
         />
       </div>
       <div className="flex flex-wrap justify-center ">

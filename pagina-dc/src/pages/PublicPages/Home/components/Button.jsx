@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Button({d, title }) {
   return (
+    /* button with their styles */
     <div
       className={`bg-white  rounded-full border-black border-2 h-12 w-48 flex justify-center items-center  ${d}}`}
     >
