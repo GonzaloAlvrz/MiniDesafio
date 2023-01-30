@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { useAuth } from "../../../../../context/authContext";
 import Menu from "../../menu.jsx/Menu";
 import Icon from "../img/header/icon.svg";
-import Options from "./component/Options";
+import OptionsAccount from "./component/OptionsAccount";
 import { Link } from "react-router-dom";
 import ModoOscuro from "../../../../../modoOscuro/ModoOscuro";
 
@@ -24,7 +24,7 @@ export default function Header() {
         <div className="h-20 w-full  flex items-center  ">
           {/* icon DC */}
           <div className="ml-24">
-            <img src={Icon} alt="" />
+          <Link to='/characters'><img src={Icon} alt="Icon" /></Link>
           </div>
           {/* Dark mode */}
           <div className="ml-5">
@@ -82,7 +82,7 @@ export default function Header() {
           <div>
             {options ? (
               <div className="absolute right-32 top-24">
-                <Options styles=" bottom-40 right-20" />
+                <OptionsAccount styles=" bottom-40 right-20" />
               </div>
             ) : (
               ""
