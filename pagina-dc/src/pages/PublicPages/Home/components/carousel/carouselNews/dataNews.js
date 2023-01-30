@@ -1,4 +1,5 @@
-export const dataCard = [
+/* data of news */
+export const dataNews = [
     {
       id: 1,
       imageurl:'https://www.dc.com/sites/default/files/Marquee_Top3Donovan_63b4e1bd28a430.96422023.jpg',

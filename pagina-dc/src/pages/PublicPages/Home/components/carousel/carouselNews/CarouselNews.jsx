@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import "../Carousel.css";
 import CardNews from "../carouselNews/CardNews";
-import { dataCard } from "../carouselNews/dataNews";
+import { dataNews } from "../carouselNews/dataNews";
 
 
 export default function Silder() {
@@ -27,7 +27,7 @@ export default function Silder() {
     }
   };
 
-  const cardNews = dataCard.map((item) => (
+  const cardNews = dataNews.map((item) => (
     <CardNews
       title={item.title}
       url={item.imageurl}

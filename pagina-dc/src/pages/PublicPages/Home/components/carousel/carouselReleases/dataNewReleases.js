@@ -1,3 +1,5 @@
+/* Data of New Releases */
+
 export const DataNewReleases = [
     {
       id: 1,

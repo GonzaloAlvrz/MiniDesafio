@@ -1,4 +1,6 @@
-export const DataCard = [
+/* Data videos */
+
+export const DataVideos = [
     {
       id: 1,
       imageurl:'https://as01.epimg.net/meristation/imagenes/2021/10/06/noticias/1633514535_199538_1633514571_noticia_normal.jpg',

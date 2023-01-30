@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import "../../carousel/Carousel.css";
 import CardVideo from "./CardVideo";
-import { DataCard } from "./dataVideos";
+import { DataVideos } from "./dataVideos";
 
 export default function Silder() {
   const responsive = {
@@ -28,7 +28,7 @@ export default function Silder() {
 
   };
 
-  const cardVideo = DataCard.map((item) => (
+  const cardVideo = DataVideos.map((item) => (
     <CardVideo
       title={item.title}
       url={item.imageurl}
