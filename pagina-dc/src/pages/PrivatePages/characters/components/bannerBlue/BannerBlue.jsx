@@ -6,6 +6,7 @@ import Cuatro from './img/cuatro.svg'
 
 export default function Banner() {
   return (
+    /* box with content (banner blue) */
     <div className='bg-[#0282F9] h-44 w-full mt-16 mb-8 flex flex-row justify-center items-center text-white'>
         <div className='flex mobile:flex-col  mobileL:flex-row justify-center items-center desktop-two:mr-8 mobile:mobile:ml-3'>
             <img className='lap_tablet:h-20 mobile:h-12 ' src={Uno} alt="" />

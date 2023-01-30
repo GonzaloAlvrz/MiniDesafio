@@ -9,12 +9,20 @@ export default function HeaderResponsive() {
 
   return (
     <div className="bg-white dark:bg-slate-800  w-full h-12 mobile:flex mobile:items-center desktop-two:hidden relative  mobile:bottom-28 tablet:bottom-20 desktop-one:bottom-0 border-b-[1px] border-black/30 drop-shadow-md">
-      <div onClick={clickMenu}>    
-      <svg width="24" className="h-10 ml-4 fill-black  dark:fill-white" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 11H16V13H4V11ZM4 6H20V8H4V6ZM4 18H11.235V16H4V18Z"/>
-</svg>
-
+      {/* icon menu */}
+      <div onClick={clickMenu}>
+        <svg
+          width="24"
+          className="h-10 ml-4 fill-black  dark:fill-white"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M4 11H16V13H4V11ZM4 6H20V8H4V6ZM4 18H11.235V16H4V18Z" />
+        </svg>
       </div>
+      {/* icon DC */}
       <div className="mx-auto">
         <svg
           width="75"
@@ -30,6 +38,7 @@ export default function HeaderResponsive() {
           />
         </svg>
       </div>
+      {/* icon search */}
       <div className="flex items-center">
         <svg
           width="18"
@@ -39,13 +48,11 @@ export default function HeaderResponsive() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.146 12.371 1.888 11.113C0.629333 9.85433 0 8.31667 0 6.5C0 4.68333 0.629333 3.14567 1.888 1.887C3.146 0.629 4.68333 0 6.5 0C8.31667 0 9.85433 0.629 11.113 1.887C12.371 3.14567 13 4.68333 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.81267 10.5627 9.688 9.688C10.5627 8.81267 11 7.75 11 6.5C11 5.25 10.5627 4.18733 9.688 3.312C8.81267 2.43733 7.75 2 6.5 2C5.25 2 4.18733 2.43733 3.312 3.312C2.43733 4.18733 2 5.25 2 6.5C2 7.75 2.43733 8.81267 3.312 9.688C4.18733 10.5627 5.25 11 6.5 11Z"
-      
-          />
+          <path d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.146 12.371 1.888 11.113C0.629333 9.85433 0 8.31667 0 6.5C0 4.68333 0.629333 3.14567 1.888 1.887C3.146 0.629 4.68333 0 6.5 0C8.31667 0 9.85433 0.629 11.113 1.887C12.371 3.14567 13 4.68333 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.81267 10.5627 9.688 9.688C10.5627 8.81267 11 7.75 11 6.5C11 5.25 10.5627 4.18733 9.688 3.312C8.81267 2.43733 7.75 2 6.5 2C5.25 2 4.18733 2.43733 3.312 3.312C2.43733 4.18733 2 5.25 2 6.5C2 7.75 2.43733 8.81267 3.312 9.688C4.18733 10.5627 5.25 11 6.5 11Z" />
         </svg>
       </div>
-      <div className="">{menu ? <Menu /> : ""}</div>
+      {/* show the menu */}
+      <div>{menu ? <Menu /> : ""}</div>
     </div>
   );
 }

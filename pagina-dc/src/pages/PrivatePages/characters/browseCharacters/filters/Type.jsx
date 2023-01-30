@@ -16,6 +16,7 @@ export default function Alignment() {
   };
 
   return (
+    /* options of type */
     <div>
       <ul className="border-b-2 border-gray-200">
         <li className={individuals ? "text-[#0282F9]" : "text-black"}>

@@ -16,23 +16,22 @@ export default function Alignment() {
   };
 
   return (
+   /*  options of Aligment */
     <div>
       <ul className="border-b-2 border-gray-200">
         <li className={heroes ? "text-[#0282F9]" : "text-black"}>
           Heroes <input onClick={clickHeroes} type="checkbox" name="" id="" />
         </li>
         <li className={complicated ? "text-[#0282F9]" : "text-black"}>
-          It's Complicated{" "}
+          It's Complicated
           <input
             onClick={clickComplicated}
             className="border-2 bg-black"
             type="checkbox"
-            name=""
-            id=""
           />
         </li>
         <li className={villains ? "text-[#0282F9]" : "text-black"}>
-          Villains{" "}
+          Villains
           <input onClick={clickVillains} type="checkbox" name="" id="" />
         </li>
       </ul>

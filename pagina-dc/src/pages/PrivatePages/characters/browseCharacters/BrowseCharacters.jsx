@@ -5,6 +5,7 @@ import Apid from "../api/Api";
 
 export default function BrowseCharacters() {
   return (
+    /* main box containing the characters, the search engine and the filters */
     <div className="mt-8">
       <div className=" mx-auto laptop:w-full  desktop-two:w-[1300px] mobile:h-[1500px] mobileL:h-[1100px] lap_tablet:h-[720px] ">
         <div className="flex flex-row w-full">

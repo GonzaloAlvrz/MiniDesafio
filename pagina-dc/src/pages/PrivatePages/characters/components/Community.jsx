@@ -6,6 +6,7 @@ export default function Community() {
       <div className="flex desktop-one:flex-row  mobile:flex-col">
         <div className=" lap_tablet:h-96 mobile:h-[750px]">
           <h3 className="mobile:ml-4 mobileL:ml-1">ENTER THE WORLD OF THE BATMAN</h3>
+          {/* box with characters and their names  */}
           <div>
             <ul className="flex lap_tablet:flex-row text-xs mobile:justify-center mobile:mx-auto lap_tablet:mx-0 ">
               <div className="flex mobile:flex-col lap_tablet:flex-row mobile:mx-4 lap_tablet:mx-0">
@@ -76,6 +77,7 @@ export default function Community() {
             </ul>
           </div>
         </div>
+        {/* Information */}
         <div className=" h-96 desktop-one:w-96 lap_tablet:w-[665px] desktop-one:ml-5 mobile:mx-auto">
           <div className="flex flex-row mobile:mx-4">
             <h2 className="mt-5 w-1/2 text-3xl">COMMUNITY</h2>

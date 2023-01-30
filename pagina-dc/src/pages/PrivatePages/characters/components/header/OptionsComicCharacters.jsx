@@ -3,6 +3,7 @@ import React from "react";
 export default function OptionsComicCharacters() {
   return (
     <div>
+      {/* Comcic Characters options */}
       <div className="bg-gray-200 dark:bg-slate-800 w-48 absolute top-[120px] left-[340px]">
         <ul>
           <li className="my-3 ml-3 hover:text-[#17ABEB]">LASTEST COMICS</li>

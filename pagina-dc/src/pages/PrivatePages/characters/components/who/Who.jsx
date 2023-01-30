@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Who() {
   return (
+    /* box with characters and their names */
     <div className="w-full mx-auto desktop-two:h-[600px]">
       <div className="flex justify-start flex-col desktop-two:ml-48 laptop:ml-14">
         <h5 className="text-[#0282F9] mobile:ml-4 ">WHO´S</h5>

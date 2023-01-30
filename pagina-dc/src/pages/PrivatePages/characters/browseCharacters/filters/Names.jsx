@@ -2,6 +2,7 @@ import React from "react";
 import ComponentNames from "./names/ComponentNames";
 export default function Names() {
   return (
+    /* options of type */
     <div className="border-b-2 border-gray-200 h-72" >
       <div className="flex flex-col">
         <div className="flex flex-row">

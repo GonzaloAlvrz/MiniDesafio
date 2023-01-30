@@ -65,11 +65,13 @@ export default function HeaderCharacters() {
   return (
     <>
       <div className="h-32 w-full bg-white dark:bg-slate-800 desktop-two:flex desktop-two:justify-center desktop-two:items-center desktop-two:flex-row z-10  mobile:hidden desktop-two:block">
+      {/* Icon DC */}
         <Link to="/characters">
           <div className="mr-7">
             <img src={Icon} alt="" />
           </div>
         </Link>
+        {/* sections */}
         <div className="flex flex-row items-center">
           <h3 className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB] hover:underline hover:underline-offset-[40px]">
             CHARACTERS
@@ -198,6 +200,7 @@ export default function HeaderCharacters() {
             </div>
        
           </div>
+          {/* log out */}
           <h3
             onClick={handleLogout}
             className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB] hover:underline hover:underline-offset-[40px]"
@@ -207,6 +210,7 @@ export default function HeaderCharacters() {
           <h3 className="font-extrabold ml-2 mr-5 hover:text-[#17ABEB] hover:underline hover:underline-offset-[40px]">
            <Link to='/account'>ACCOUNT</Link> 
           </h3>
+          {/* Dark mode */}
           <div>
             <ModoOscuro modo={modo} setModo={setModo} />
           </div>

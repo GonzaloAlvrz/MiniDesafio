@@ -16,10 +16,11 @@ export default function Menu() {
   return (
     <div className="absolute  top-11 left-0 w-full min-h-screen bg-white dark:bg-slate-800  border-t-2 border-gray-200 z-20 overflow-y-auto ">
       <div className="ml-5 mt-5">
-
-
+        {/* sections */}
         <ul>
+          {/* Dark mode */}
           <li className="flex flex-row text-[#17ABEB]">DARK MODE <ModoOscuro modo={modo} setModo={setModo} />: {modo ? 'ON' : 'OFF'}</li>
+          {/* Log out */} 
           <li onClick={handleLogout} className='text-[#17ABEB]'>LOG OUT</li>
 
           <Link to="/account">

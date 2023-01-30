@@ -2,6 +2,8 @@ import Axios from "axios";
 import { React, useState, useEffect } from "react";
 
 function App() {
+  /* data of the characters and search */
+
   const [personajes, setPersonajes] = useState([]);
   const [busqueda, setBusqueda] = useState("");
 
@@ -15,8 +17,6 @@ function App() {
       })
       .catch((error) => console.log(error));
   }, []);
-
-  console.log(personajes);
 
   const handleChange = (e) => {
     setBusqueda(e.target.value);
@@ -57,7 +57,7 @@ function App() {
             </div>
             <h4>{p.nombre}</h4>
           </div>
-        ))}{" "}
+        ))}
       </div>
     </div>
   );

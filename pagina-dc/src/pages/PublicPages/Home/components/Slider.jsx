@@ -106,7 +106,7 @@ export default function Slider() {
         </div>
       </div>
       <div className="flex top-4 justify-center py-2">
-        {slides.map((slide, slideIndex) => (
+        {slides.map((slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
@@ -121,4 +121,3 @@ export default function Slider() {
     </div>
   );
 }
-/* mobile:mx-auto mobile:flex mobile:justify-center mobile:items-center mobile:flex-col */

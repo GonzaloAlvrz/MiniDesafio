@@ -5,6 +5,7 @@ import Youtube from './img/youtube.svg'
 
 export default function Social() {
   return (
+    /* Social box with the social media */
     <div className="h-32 w-full bg-[#303030] flex flex-row items-center ">
       <div className="desktop-two:block mobile:hidden">
         <div className="border-2 border-[#17ABEB] text-white h-12 flex justify-center items-center ml-40">
